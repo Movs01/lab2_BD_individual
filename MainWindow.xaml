@@ -1,0 +1,129 @@
+﻿<Window x:Class="lab2_BD_individual.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2_BD_individual"
+        mc:Ignorable="d"
+       Title="MainWindow" Height="680" Width="980" Background="Gray">
+    <Grid>
+
+        <TabControl Background="Gray" >
+
+            <TabItem Header="Сотрудники"  FontSize="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200*"/>
+                        <ColumnDefinition Width="200*"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                    </Grid.RowDefinitions>
+                    <Button Name="AddEmployeeButton" Click="ButtonInsertEmployees_Click" FontSize="20" FontWeight="Bold" Width="200" Height="50" Grid.Row="5" Grid.Column="2" >Add</Button>
+                    <Label Name="EmployeeIDLabel" FontSize="20" Width="200" Height="50" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Код сотрудника:</Label>
+                    <TextBox Name="EmployeeIDTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="0" Grid.Column="1"></TextBox>
+                    <Label Name="FullNameLabel" FontSize="20" Width="200" Height="50" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Полное имя:</Label>
+                    <TextBox Name="FullNameTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="1" Grid.Column="1"></TextBox>
+                    <Label Name="AgeLabel" FontSize="20" Width="200" Height="50" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Возраст:</Label>
+                    <TextBox Name="AgeTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="2" Grid.Column="1" ></TextBox>
+                    <Label Name="GenderLabel" FontSize="20" Width="200" Height="50" Grid.Row="3" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Пол:</Label>
+                    <RadioButton Name="MaleRadioButton" Content="Мужчина" FontSize="20" Grid.Row="3" Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center"/>
+                    <RadioButton Name="FemaleRadioButton" Content="Женщина" FontSize="20" Grid.Row="3" Grid.Column="1"  VerticalAlignment="Bottom"  HorizontalAlignment="Center"/>
+                    <Label Name="AddressLabel" FontSize="20" Width="200" Height="50" Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Адрес:</Label>
+                    <TextBox Name="AddressTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="4" Grid.Column="1" ></TextBox>
+                    <Label Name="PhoneNumberLabel" FontSize="20" Width="200" Height="50" Grid.Row="5" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Номер телефона:</Label>
+                    <TextBox Name="PhoneNumberTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="5" Grid.Column="1"></TextBox>
+                    <Label Name="PassportDataLabel" FontSize="20" Width="200" Height="50" Grid.Row="6" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Паспортные данные:</Label>
+                    <TextBox Name="PassportDataTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="6" Grid.Column="1" ></TextBox>
+                    <Label Name="PositionCodeEmployeeLabel" FontSize="20" Width="200" Height="50" Grid.Row="7" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Код должности:</Label>
+                    <TextBox Name="PositionCodeEmployeeTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="7" Grid.Column="1" ></TextBox>
+                    <DataGrid Name="DataGridEmployee" Grid.Row="8" Grid.RowSpan="3" Grid.ColumnSpan="3" Background="DarkGray" BorderBrush="Black" BorderThickness="3" IsReadOnly="True"></DataGrid>
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="Должности" FontSize="20" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200*"/>
+                        <ColumnDefinition Width="200*"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                    </Grid.RowDefinitions>
+                    <Button Name="AddPositionsButton" Click="ButtonInsertPosition_Click"  FontSize="20" FontWeight="Bold" Width="200" Height="50" Grid.Row="3" Grid.Column="2" >Add</Button>
+                    <Label Name="PositionCodePositionsLabel" FontSize="20" Width="200" Height="50" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Код должности:</Label>
+                    <TextBox Name="PositionCodePositionsTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="0" Grid.Column="1" ></TextBox>
+                    <Label Name="PositionNameLabel" FontSize="20" Width="200" Height="50" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Left"  VerticalContentAlignment="Center">Наименование должности:</Label>
+                    <TextBox Name="PositionNameTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="1" Grid.Column="1" ></TextBox>
+                    <Label Name="SalaryLabel" FontSize="20" Width="200" Height="50" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Оклад:</Label>
+                    <TextBox Name="SalaryTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="2" Grid.Column="1" ></TextBox>
+                    <Label Name="ResponsibilitiesLabel" FontSize="20" Width="200" Height="50" Grid.Row="3" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Обязанности:</Label>
+                    <TextBox Name="ResponsibilitiesTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="3" Grid.Column="1" ></TextBox>
+                    <Label Name="RequirementsLabel" FontSize="20" Width="200" Height="50" Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Требования:</Label>
+                    <TextBox Name="RequirementsTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="4" Grid.Column="1" ></TextBox>
+                    <DataGrid Name="DataGridPosition" Grid.Row="8" Grid.RowSpan="3" Grid.ColumnSpan="3" Background="DarkGray" BorderBrush="Black" BorderThickness="3" IsReadOnly="True"></DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Выданные книги"  FontSize="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="60*"/>
+                    </Grid.RowDefinitions>
+                    <Button Name="AddBorrowedBooksButton" Click="ButtonInsertBorrowedBook_Click"  FontSize="20" FontWeight="Bold" Width="200" Height="50" Grid.Row="3" Grid.Column="2" >Add</Button>
+                    <Label Name="BookCodeBorrowedBooksLabel"  FontSize="20" Width="200" Height="50" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Код книги:</Label>
+                    <TextBox Name="BookCodeBorrowedBooksTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="0" Grid.Column="1" ></TextBox>
+                    <Label Name="ReaderCodeBorrowedBooksLabel"  FontSize="20" Width="200" Height="50" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Код читателя:</Label>
+                    <TextBox Name="ReaderCodeBorrowedBooksTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="1" Grid.Column="1" ></TextBox>
+                    <Label Name="BorrowDateBorrowedBooksLabel" FontSize="20" Width="200" Height="50" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Дата выдачи:</Label>
+                    <DatePicker Name="BorrowDateBorrowedBooksDatePicker"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"  Grid.Row="2" Grid.Column="1" ></DatePicker>
+                    <Label Name="ReturnDateBorrowedBooksLabel"  FontSize="20" Width="200" Height="50" Grid.Row="3" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Дата возврата:</Label>
+                    <DatePicker Name="ReturnDateBorrowedBooksDatePicker"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"  Grid.Row="3" Grid.Column="1" ></DatePicker>
+                    <Label Name="ReturnStatusBorrowedBooksLabel"  FontSize="20" Width="200" Height="50" Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Отметка о возврате:</Label>
+                    <RadioButton Name="ReturnedRadioButton" Content="Вернул" FontSize="20" Grid.Row="4" Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" />
+                    <RadioButton Name="NotReturnedRadioButton" Content="Не вернул" FontSize="20" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Center" />
+                    <Label Name="EmployeeIDBorrowedBooksLabel" FontSize="20" Width="200" Height="50" Grid.Row="5" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Код сотрудника:</Label>
+                    <TextBox Name="EmployeeIDBorrowedBooksTextBox" TextWrapping="WrapWithOverflow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Width="200" Height="50" Grid.Row="5" Grid.Column="1"></TextBox>
+                    <DataGrid Name="DataGridBorrowedBooks" Grid.Row="8" Grid.RowSpan="3" Grid.ColumnSpan="3" Background="DarkGray" BorderBrush="Black" BorderThickness="3" IsReadOnly="True"></DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
